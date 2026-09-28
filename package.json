@@ -1,0 +1,35 @@
+{
+  "name": "factorial-qa-automation",
+  "version": "1.0.0",
+  "description": "Comprehensive test automation framework for factorial calculator application using Playwright and TypeScript with Page Object Model pattern",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test tests/ui --project=chromium",
+    "test:api": "npx playwright test tests/api --project=chromium",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:safari": "npx playwright test --project=safari",
+    "test:report": "npx playwright show-report",
+    "test:special": "npx playwright test --grep @special"
+  },
+  "keywords": [
+    "playwright",
+    "test-automation",
+    "qa",
+    "testing",
+    "factorial",
+    "e2e",
+    "typescript",
+    "page-object-model"
+  ],
+  "author": "QA Engineer",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.15.17",
+    "typescript": "^5.9.3"
+  }
+}
