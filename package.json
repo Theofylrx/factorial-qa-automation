@@ -7,13 +7,18 @@
     "test": "npx playwright test",
     "test:ui": "npx playwright test tests/ui --project=chromium",
     "test:api": "npx playwright test tests/api --project=chromium",
+    "test:integration": "npx playwright test tests/integration --project=chromium",
+    "test:visual": "npx playwright test tests/visual --project=chromium",
+    "test:smoke": "npx playwright test --grep @smoke --project=chromium",
+    "test:smoke:all": "npx playwright test --grep @smoke",
     "test:headed": "npx playwright test --headed",
     "test:debug": "npx playwright test --debug",
     "test:chromium": "npx playwright test --project=chromium",
     "test:firefox": "npx playwright test --project=firefox",
     "test:safari": "npx playwright test --project=safari",
     "test:report": "npx playwright show-report",
-    "test:special": "npx playwright test --grep @special"
+    "test:special": "npx playwright test --grep @special",
+    "test:update-snapshots": "npx playwright test --update-snapshots"
   },
   "keywords": [
     "playwright",
@@ -30,6 +35,7 @@
   "devDependencies": {
     "@playwright/test": "^1.48.0",
     "@types/node": "^22.15.17",
+    "md-to-pdf": "^5.2.5",
     "typescript": "^5.9.3"
   }
 }

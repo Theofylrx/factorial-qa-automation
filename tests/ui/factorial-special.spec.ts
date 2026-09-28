@@ -19,7 +19,7 @@ test.describe('Factorial Calculator - Special Tests', () => {
    * Test that invalid input triggers red border styling on the input field
    */
   test('SPECIAL TEST 1: should apply red border styling for invalid input (form validation)',
-    { tag: '@special' },
+    { tag: ['@special', '@smoke'] },
     async ({ factorialPage }) => {
       // Enter invalid input (non-integer)
       await factorialPage.enterNumber('invalid123');
@@ -55,7 +55,7 @@ test.describe('Factorial Calculator - Special Tests', () => {
    * Test that factorial of 12 returns the exact expected answer: 479001600
    */
   test('SPECIAL TEST 2: should calculate factorial of 12 with expected answer 479001600',
-    { tag: '@special' },
+    { tag: ['@special', '@smoke'] },
     async ({ factorialPage }) => {
       const inputNumber = 12;
       const expectedFactorial = 479001600;
@@ -85,7 +85,7 @@ test.describe('Factorial Calculator - Special Tests', () => {
    * Intercepts the POST request to /factorial endpoint and validates request details
    */
   test('SPECIAL TEST 3: should verify API call with correct headers and parameters',
-    { tag: '@special' },
+    { tag: ['@special', '@smoke'] },
     async ({ factorialPage, page }) => {
       const testNumber = 7;
       let apiRequestCaptured = false;

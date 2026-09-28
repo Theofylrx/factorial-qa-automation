@@ -66,6 +66,13 @@ export class FactorialPage extends BasePage {
   }
 
   /**
+   * Clear the input field
+   */
+  async clearInput(): Promise<void> {
+    await this.numberInput.clear();
+  }
+
+  /**
    * Click the calculate button
    */
   async clickCalculate(): Promise<void> {
